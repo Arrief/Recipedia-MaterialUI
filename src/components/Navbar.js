@@ -4,8 +4,6 @@ import FastfoodIcon from '@mui/icons-material/Fastfood';
 import MailIcon from '@mui/icons-material/Mail';
 import Notifications from "@mui/icons-material/Notifications";
 
-const message = 4;
-
 // custom toolbar
 const StyledToolbar = styled(Toolbar) ({
   display: "flex",
@@ -46,28 +44,40 @@ const IconsPhone = styled(Box) (({theme}) => ({
 }))
 
 const Navbar = () => {
+  // state for messages in user inbox
+  const [messages, setMessages] = useState(4);
   // state controlling if the menu from clicking the avatar shows
   const [open, setOpen] = useState(false);
 
   return(
-    <AppBar position="sticky">
+    <AppBar position="sticky" sx={{backgroundColor: "#fb8c00"}}>
       {/* Toolbar gives a default margin and padding */}
       <StyledToolbar>
-        <Typography sx={{display: {xs: "none", sm: "block"}}} variant="h6">
-          Blog
+        <Typography 
+          component="a"
+          href="/"
+          sx={{
+            color: "white", 
+            display: {xs: "none", sm: "block"}, 
+            textDecoration:"none"
+          }} 
+          variant="h6"
+        >
+          <FastfoodIcon /> Recipedia
         </Typography>
         {/* The icon will only appear on very small screens to replace the Typography */}
         <FastfoodIcon sx={{display: {xs: "block", sm: "none"}}} />
         <Search>
-          <InputBase placeholder="search..."/>
+          <InputBase placeholder="Search..."/>
         </Search>
         {/* Icons on the right displayed only on larger screen sizes */}
         <IconsDesktop>
-          <Badge badgeContent={message ? message : undefined} color="error">
-            <MailIcon color="white" />
+          {/* display number of new messages, coming from state variable */}
+          <Badge badgeContent={messages ? messages : undefined} color="error">
+            <MailIcon sx={{color: "#3b3a38"}} />
           </Badge>
           <Badge badgeContent={2} color="error">
-            <Notifications color="white" />
+            <Notifications sx={{color: "#3b3a38"}} />
           </Badge>
           <Avatar
             src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
@@ -83,7 +93,7 @@ const Navbar = () => {
               sx={{height: 30, width: 30}}
           />
           <Typography variant="span">
-            Username
+            J. Smith
           </Typography>
         </IconsPhone>
       </StyledToolbar>
@@ -105,7 +115,7 @@ const Navbar = () => {
           horizontal: 'right',
         }}
       >
-        <MenuItem>Profile</MenuItem>
+        <MenuItem component="a" href="/profile">Profile</MenuItem>
         <MenuItem>Settings</MenuItem>
         <MenuItem>Logout</MenuItem>
       </Menu>

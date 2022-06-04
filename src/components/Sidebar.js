@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Box, List, ListItemButton, ListItem, ListItemIcon, ListItemText, Switch } from "@mui/material";
 import ArticleIcon from '@mui/icons-material/Article';
-import HandshakeIcon from '@mui/icons-material/Handshake';
 import Home from '@mui/icons-material/Home';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 import PeopleIcon from '@mui/icons-material/People';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 
 const Sidebar = () => {
@@ -14,16 +14,16 @@ const Sidebar = () => {
 
   return(
     <Box 
-      bgcolor="skyblue" 
+      bgcolor="#f5f3eb"
       flex={1} 
-      p={2} 
-      /* if the screen size is super small, don't display the Sidebar at all;
+      p={2}
+      /* if the screen size is very small, don't display the Sidebar at all;
         otherwise display as block */ 
-      sx={{display: {xs: "none", sm: "block"}}}
+      sx={{display: {xs: "none", sm: "block"}, height: "fit-content"}}
     >
        <List>
           <ListItem disablePadding>
-            {/* we can use component here like with Typography to give this the functionality of an <a> tag */}
+            {/* we can use "component" here like with Typography to give this the functionality of an <a> tag */}
             <ListItemButton component="a" href="/">
               <ListItemIcon>
                 <Home />
@@ -37,10 +37,9 @@ const Sidebar = () => {
               <ListItemIcon>
                 <ArticleIcon />
               </ListItemIcon>
-              <ListItemText primary="Pages" />
+              <ListItemText primary="My Recipes" />
             </ListItemButton>
           </ListItem>
-
 
           <ListItem disablePadding>
             <ListItemButton component="a" href="/">
@@ -61,11 +60,11 @@ const Sidebar = () => {
           </ListItem>
 
           <ListItem disablePadding>
-            <ListItemButton component="a" href="/">
+            <ListItemButton component="a" href="/restaurants">
               <ListItemIcon>
-                <HandshakeIcon />
+                <RestaurantIcon />
               </ListItemIcon>
-              <ListItemText primary="Marketplace" />
+              <ListItemText primary="Nearby Restaurants" />
             </ListItemButton>
           </ListItem>
 
@@ -78,7 +77,7 @@ const Sidebar = () => {
                   : <NightlightIcon />
                 }
               </ListItemIcon>
-              <Switch />
+              <Switch color="default"/>
             </ListItemButton>
           </ListItem>
       </List>
