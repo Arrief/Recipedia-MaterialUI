@@ -1,4 +1,5 @@
 import Feed from '../components/Feed';
+import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Rightbar from '../components/Rightbar';
 import Sidebar from '../components/Sidebar';
@@ -21,6 +22,7 @@ const Home = () => {
         <Feed flex={4} />
         <Rightbar flex={2} />
       </Stack>
+      <Footer />
   </Box>
   );
 }
