@@ -80,7 +80,7 @@ const Navbar = () => {
             <Notifications sx={{color: "#3b3a38"}} />
           </Badge>
           <Avatar
-            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+            src="/images/Gordon.jpg"
             sx={{height: 30, width: 30}}
             // open the menu when the avatar is clicked
             onClick={() => setOpen(true)}
@@ -89,11 +89,11 @@ const Navbar = () => {
         {/* Version for phone displays, open menu when clicking avatar or username */}
         <IconsPhone onClick={() => setOpen(true)}>
           <Avatar
-              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+              src="/images/Gordon.jpg"
               sx={{height: 30, width: 30}}
           />
           <Typography variant="span">
-            J. Smith
+            Gordon
           </Typography>
         </IconsPhone>
       </StyledToolbar>
