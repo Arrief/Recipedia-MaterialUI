@@ -1,6 +1,7 @@
 import { Favorite, MoreVert, Share } from "@mui/icons-material";
 import ChatIcon from '@mui/icons-material/Chat';
 import { Avatar, Box, IconButton, Card, CardActions, CardContent, CardHeader, CardMedia, Link, styled, Typography } from "@mui/material";
+import AddRecipe from "./AddRecipe";
 
 const StyledLink = styled(Link) (({theme}) => ({
   color: "#fb8c00",
@@ -97,6 +98,8 @@ const Feed = () => {
             </IconButton>
           </CardActions>
       </Card>
+      {/* Floating action button */}
+      <AddRecipe />
     </Box>
   )
 }

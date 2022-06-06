@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { AppBar, Avatar, Badge, Box, InputBase, Menu, MenuItem, styled, Toolbar, Typography } from "@mui/material";
+import DraftsIcon from '@mui/icons-material/Drafts';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import MailIcon from '@mui/icons-material/Mail';
 import Notifications from "@mui/icons-material/Notifications";
+import '../App.css'
 
 // custom toolbar
 const StyledToolbar = styled(Toolbar) ({
@@ -48,9 +50,15 @@ const Navbar = () => {
   const [messages, setMessages] = useState(4);
   // state controlling if the menu from clicking the avatar shows
   const [open, setOpen] = useState(false);
+  // state for determining if user opened/views messages
+  const [viewMessages, setViewMessages] = useState(false);
+  // function for changing mail icon when user opens or closes messages
+  const openMail = () => {
+    setViewMessages(!viewMessages);
+  }
 
   return(
-    <AppBar position="sticky" sx={{backgroundColor: "#fb8c00"}}>
+    <AppBar position="sticky" sx={{backgroundColor: "var(--main-orange)"}}>
       {/* Toolbar gives a default margin and padding */}
       <StyledToolbar>
         <Typography 
@@ -74,7 +82,11 @@ const Navbar = () => {
         <IconsDesktop>
           {/* display number of new messages, coming from state variable */}
           <Badge badgeContent={messages ? messages : undefined} color="error">
-            <MailIcon sx={{color: "#3b3a38"}} />
+            {/* Display corresponding mail icon depending on user opening messages */}
+            {viewMessages
+              ? <DraftsIcon sx={{color: "#3b3a38"}} onClick={openMail} /> 
+              : <MailIcon sx={{color: "#3b3a38"}} onClick={openMail} />
+            }
           </Badge>
           <Badge badgeContent={2} color="error">
             <Notifications sx={{color: "#3b3a38"}} />

@@ -60,7 +60,7 @@ const Sidebar = () => {
           </ListItem>
 
           <ListItem disablePadding>
-            <ListItemButton component="a" href="/restaurants">
+            <ListItemButton component="a" href="/">
               <ListItemIcon>
                 <RestaurantIcon />
               </ListItemIcon>
