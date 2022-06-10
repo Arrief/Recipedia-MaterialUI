@@ -8,13 +8,12 @@ import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   // state for switching between light & dark theme
   let [dark, setDark] = useState(false)
 
   return(
-    <Box 
-      bgcolor="#f5f3eb"
+    <Box
       flex={1} 
       p={2}
       /* if the screen size is very small, don't display the Sidebar at all;
@@ -77,7 +76,7 @@ const Sidebar = () => {
                   : <NightlightIcon />
                 }
               </ListItemIcon>
-              <Switch color="default"/>
+              <Switch color="default" onChange={() => props.setMode(props.mode === "light" ? "dark" : "light")}/>
             </ListItemButton>
           </ListItem>
       </List>

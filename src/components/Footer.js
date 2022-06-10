@@ -13,12 +13,12 @@ const Footer = () => {
   return(
     <footer>
       <FooterBox>
-        <Stack direction="row" margin="1rem">
+        {/* <Stack direction="row" margin="1rem">
           <ListItem>Test1</ListItem>
           <ListItem>Test2</ListItem>
           <ListItem>Test3</ListItem>
         </Stack>
-        <Grid></Grid>
+        <Grid></Grid> */}
         <Typography align="center">&copy;2022</Typography>
       </FooterBox>
     </footer>

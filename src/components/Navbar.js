@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AppBar, Avatar, Badge, Box, InputBase, Menu, MenuItem, styled, Toolbar, Typography } from "@mui/material";
+import { AppBar, Avatar, Badge, Box, InputBase, Link, Menu, MenuItem, styled, Toolbar, Typography } from "@mui/material";
 import DraftsIcon from '@mui/icons-material/Drafts';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import MailIcon from '@mui/icons-material/Mail';
@@ -74,7 +74,9 @@ const Navbar = () => {
           <FastfoodIcon /> Recipedia
         </Typography>
         {/* The icon will only appear on very small screens to replace the Typography */}
-        <FastfoodIcon sx={{display: {xs: "block", sm: "none"}}} />
+        <Link href="/" color="inherit">
+          <FastfoodIcon sx={{display: {xs: "block", sm: "none"}}} />
+        </Link>
         <Search>
           <InputBase placeholder="Search..."/>
         </Search>

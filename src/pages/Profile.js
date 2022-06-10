@@ -4,6 +4,7 @@ import '../App.css';
 
 const Avatar = styled.img `
   border-radius: 1rem;
+  border: ${props => props.pizza};
   height: 30vh;
   margin-left: 1rem;
 `;
@@ -13,7 +14,7 @@ const UserCard = styled.section `
   justify-content: space-between;
   align-items: center;
   border: 2px solid var(--main-orange);
-  border-radius: .5rem;
+  border-radius: ${props => props.radius || ".5rem"};
   margin-top: 5rem;
   margin-left: auto;
   margin-right: auto;

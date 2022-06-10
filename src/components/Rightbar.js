@@ -33,6 +33,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 const Rightbar = () => {
   return(
     <Box 
+      bgcolor="white"
       flex={2} 
       p={2}
       sx={{display: {xs: "none", sm: "block"}}}
@@ -51,7 +52,7 @@ const Rightbar = () => {
             overlap="circular"
             variant="dot"
           >
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+            <Avatar alt="first guy avatar" src="https://www.belichtungswert.de/bilder/bewerbungsfotos-muenchen-mann-portrait-farbig.jpg" />
           </StyledBadge>
           <StyledBadge
             anchorOrigin={{
@@ -61,7 +62,7 @@ const Rightbar = () => {
             overlap="circular"
             variant="dot"
           >
-            <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+            <Avatar alt="cat guy" src="https://play-lh.googleusercontent.com/jkpabs01pnEU5Jc9U3MuWdwwoWi8v7x33RZNYyLP2T8a2j1csnjOy3_-KI6JU8JntlNW" />
           </StyledBadge>
           <StyledBadge
             anchorOrigin={{
@@ -71,7 +72,7 @@ const Rightbar = () => {
             overlap="circular"
             variant="dot"
           >
-            <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+            <Avatar alt="some guy" src="https://us.123rf.com/450wm/dmitrytsvetkov/dmitrytsvetkov1606/dmitrytsvetkov160600351/60012954-fashion-style-portrait-of-young-happy-smiling-beautiful-elegant-woman-in-black-dress-walking-at-city.jpg?ver=6" />
           </StyledBadge>
           <StyledBadge
             anchorOrigin={{
@@ -81,7 +82,7 @@ const Rightbar = () => {
             overlap="circular"
             variant="dot"
           >
-            <Avatar alt="Agnes Walker" src="/static/images/avatar/4.jpg" />
+            <Avatar alt="some other guy" src="https://cdn.pixabay.com/photo/2017/07/29/18/24/portrait-2552312_1280.jpg" />
           </StyledBadge>
           <Avatar alt="Trevor Henderson" src="/static/images/avatar/5.jpg" />
           <Avatar alt="Agnes Walker" src="/static/images/avatar/4.jpg" />
@@ -94,7 +95,7 @@ const Rightbar = () => {
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+          <Avatar alt="Remy Sharp" src="https://cdn.pixabay.com/photo/2017/07/29/18/24/portrait-2552312_1280.jpg" />
         </ListItemAvatar>
         <ListItemText
           primary="Brunch this weekend?"
@@ -116,7 +117,7 @@ const Rightbar = () => {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+          <Avatar alt="Travis Howard" src="https://play-lh.googleusercontent.com/jkpabs01pnEU5Jc9U3MuWdwwoWi8v7x33RZNYyLP2T8a2j1csnjOy3_-KI6JU8JntlNW" />
         </ListItemAvatar>
         <ListItemText
           primary="Summer BBQ"
@@ -138,10 +139,10 @@ const Rightbar = () => {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+          <Avatar alt="Cindy Baker" src="https://us.123rf.com/450wm/dmitrytsvetkov/dmitrytsvetkov1606/dmitrytsvetkov160600351/60012954-fashion-style-portrait-of-young-happy-smiling-beautiful-elegant-woman-in-black-dress-walking-at-city.jpg?ver=6" />
         </ListItemAvatar>
         <ListItemText
-          primary="Oui Oui"
+          primary="French Food"
           secondary={
             <>
               <Typography
