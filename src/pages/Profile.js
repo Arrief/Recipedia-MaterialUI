@@ -29,10 +29,10 @@ const UserData = styled.div `
   margin-right: 2rem;
 `;
 
-const Profile = () => {
+const Profile = (props) => {
   return(
     <>
-    <Navbar />
+    <Navbar mode={props.mode} />
       <UserCard>
         <Avatar src="/images/Gordon.jpg" alt="avatar" />
         <UserData>

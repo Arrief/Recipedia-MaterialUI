@@ -30,10 +30,10 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   },
 }));
 
-const Rightbar = () => {
+const Rightbar = (props) => {
   return(
     <Box 
-      bgcolor="white"
+      bgcolor={props.mode === "light" ? "white" : "background.dark"}
       flex={2} 
       p={2}
       sx={{display: {xs: "none", sm: "block"}}}

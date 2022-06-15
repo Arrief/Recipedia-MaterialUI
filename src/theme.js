@@ -5,7 +5,7 @@ const theme = createTheme({
     recipediaOrange: {
       main: "#fb8c00",
       dark: "#cf7606"
-      // "#911e1a"
+      // dark red: "#911e1a"
     },
     background: {
       main: "hsl(39, 100%, 93%)",

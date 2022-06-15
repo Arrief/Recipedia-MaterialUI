@@ -45,7 +45,7 @@ const IconsPhone = styled(Box) (({theme}) => ({
   }
 }))
 
-const Navbar = () => {
+const Navbar = (props) => {
   // state for messages in user inbox
   const [messages, setMessages] = useState(4);
   // state controlling if the menu from clicking the avatar shows
@@ -58,8 +58,9 @@ const Navbar = () => {
   }
 
   return(
-    <AppBar position="sticky" sx={{backgroundColor: "var(--main-orange)"}}>
-      {/* Toolbar gives a default margin and padding */}
+    // change AppBar background-color depending on light/darkmode props coming from Home.js
+    <AppBar position="sticky" sx={props.mode === "light" ? {backgroundColor: "recipediaOrange.main"} : {backgroundColor: "recipediaOrange.dark"}}>
+      {/* Toolbar comes with a default margin and padding */}
       <StyledToolbar>
         <Typography 
           component="a"
@@ -73,9 +74,9 @@ const Navbar = () => {
         >
           <FastfoodIcon /> Recipedia
         </Typography>
-        {/* The icon will only appear on very small screens to replace the Typography */}
+        {/* This second icon will only appear on very small screens to replace the Typography */}
         <Link href="/" color="inherit">
-          <FastfoodIcon sx={{display: {xs: "block", sm: "none"}}} />
+          <FastfoodIcon sx={{color: "white", display: {xs: "block", sm: "none"}}} />
         </Link>
         <Search>
           <InputBase placeholder="Search..."/>
@@ -106,7 +107,7 @@ const Navbar = () => {
               src="/images/Gordon.jpg"
               sx={{height: 30, width: 30}}
           />
-          <Typography variant="span">
+          <Typography variant="span" color="white">
             Gordon
           </Typography>
         </IconsPhone>

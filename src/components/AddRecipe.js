@@ -31,7 +31,7 @@ const AddRecipe = () => {
   const [open, setOpen] = useState(false);
 
   return(
-    // using theme here for Floating action button color
+    // using imported theme.js here for Floating action button color
     <ThemeProvider theme={theme}>
       <Tooltip 
         title="Add a recipe" 
