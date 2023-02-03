@@ -1,22 +1,24 @@
-import { Box, Grid, ListItem, Stack, styled, Typography } from "@mui/material"
-import '../App.css';
+// component copied directly into Home.js to utilize light/dark-mode switch functionality
 
-const FooterBox = styled(Box) (({theme}) => ({
-  alignItems: "center",
-  backgroundColor: "var(--main-orange)", 
-  color: "white", 
-  maxWidth: "100vw", 
-  padding: ".5rem"
-}))
+// import { Box, styled, Typography } from "@mui/material";
+// import "../App.css";
 
-const Footer = () => {
-  return(
-    <footer>
-      <FooterBox>
-        <Typography align="center">&copy;2022</Typography>
-      </FooterBox>
-    </footer>
-  );
-}
+// const FooterBox = styled(Box)(({ theme }) => ({
+//   alignItems: "center",
+//   backgroundColor: "var(--main-orange)",
+//   color: "white",
+//   maxWidth: "100vw",
+//   padding: ".5rem",
+// }));
 
-export default Footer;
+// const Footer = () => {
+//   return (
+//     <footer>
+//       <FooterBox>
+//         <Typography align="center">&copy;2022</Typography>
+//       </FooterBox>
+//     </footer>
+//   );
+// };
+
+// export default Footer;
